@@ -73,9 +73,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="hearth"
         options={{
-          title: 'Explore',
+          title: 'Hearth',
           tabBarIcon: ({ color }) => <HearthIcon color={color} />,
         }}
       />
