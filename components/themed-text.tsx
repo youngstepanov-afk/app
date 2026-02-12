@@ -17,7 +17,6 @@ const fontFamilies = (Fonts ?? {}) as Partial<{
 }>;
 
 export function ThemedText({
-  style,
   lightColor,
   darkColor,
   type = 'default',
@@ -32,7 +31,6 @@ export function ThemedText({
         type === 'default' ? styles.default : undefined,
         type === 'title' ? styles.title : undefined,
         type === 'subtitle' ? styles.subtitle : undefined,
-        style,
       ]}
       {...rest}
     />
