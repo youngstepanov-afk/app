@@ -71,7 +71,6 @@ export function SwipeableTabBar({ state, descriptors, navigation }: BottomTabBar
     Platform.OS === 'android' ? 'dimezisBlurView' : undefined;
 
   React.useEffect(() => {
-    // iOS supports "will", Android reliably supports "did".
     const showEvent = Platform.OS === 'ios' ? 'keyboardWillShow' : 'keyboardDidShow';
     const hideEvent = Platform.OS === 'ios' ? 'keyboardWillHide' : 'keyboardDidHide';
 
@@ -170,7 +169,6 @@ export function SwipeableTabBar({ state, descriptors, navigation }: BottomTabBar
 
   React.useEffect(() => {
     if (isDraggingRef.current) return;
-    // Keep preview until navigation finishes and the active tab catches up.
     if (previewIndex == null) return;
     if (previewIndex !== state.index) return;
     clearPreviewIndex();
